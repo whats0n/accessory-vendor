@@ -1,0 +1,40 @@
+<!-- begin header -->
+<header class="header">
+	{# button back #}
+	{% if header.back %}
+		<button class="header__back">
+			{{mixins.icon('arrow-left')}}
+		</button>
+	{% endif %}
+	{# button nav #}
+	{% if header.nav %}
+		<button class="header__btn-nav" data-modal-control="modal-nav">
+			<span></span>
+		</button>
+	{% endif %}
+	{# button help #}
+	{% if header.help %}
+		<button class="header__btn-help">
+			{{mixins.icon('question-option')}}
+		</button>
+	{% endif %}
+	{# button logout #}
+	{% if header.logout %}
+		<button class="header__logout">
+			{{mixins.icon('logout')}}
+			<span>Logout</span>
+		</button>
+	{% endif %}
+	<div class="header__inner">
+		{# logo #}
+		{% if header.logo and header.logoLeft %}
+			<img src="img/{{header.logoSrc or 'b2b-white.svg'}}" alt="{{header.logoAlt or 'B2BSoft'}}" class="header__logo header__logo_left {{header.logoClassList}}">
+		{% endif %}
+		<div class="header__title">{{headerTitle or 'Dealer Portal by'}}</div>
+		{# logo #}
+		{% if header.logo and header.logoRight %}
+			<img src="img/{{header.logoSrc or 'b2b-white.svg'}}" alt="{{header.logoAlt or 'B2BSoft'}}" class="header__logo header__logo_right {{header.logoClassList}}">
+		{% endif %}
+	</div>
+</header>
+<!-- end header -->

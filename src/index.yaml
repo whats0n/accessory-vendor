@@ -1,0 +1,6 @@
+ProjectTitle: app
+
+PageList:
+- file: login.html
+- file: registration.html
+- file: change-password.html

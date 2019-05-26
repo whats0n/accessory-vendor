@@ -1,0 +1,38 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="container">
+		<div class="inner">
+			<form action="/" class="form form_sm form_box">
+				{% for item in [
+					{
+						label: 'Enter email',
+						id: 'login-email',
+						input: true
+					},
+					{
+						label: 'Enter password',
+						id: 'login-password',
+						input: {
+							type: 'password'
+						}
+					}
+				] %}
+					{{mixins.group(item)}}
+				{% endfor %}
+				<div class="form__footer">
+					<button class="btn btn_wide" data-animation="ripple">Login</button>
+				</div>
+				<div class="form__links">
+					<a href="#" class="form__link">Forgot password?</a>
+					<a href="#" class="form__link">Not a member yet?</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+{% endblock %}

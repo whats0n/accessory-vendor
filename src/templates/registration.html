@@ -1,0 +1,57 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="container">
+		<div class="inner">
+			<form action="/" class="form form_sm form_box">
+				{% for item in [
+					{
+						label: 'Enter name',
+						id: 'login-name',
+						input: true
+					},
+					{
+						label: 'Enter email',
+						id: 'login-email',
+						input: true
+					},
+					{
+						label: 'Enter password',
+						id: 'login-password',
+						input: {
+							type: 'password'
+						}
+					},
+					{
+						label: 'Confirm password',
+						id: 'login-confirm',
+						input: {
+							type: 'password'
+						}
+					},
+					{
+						label: 'Select actions that you plan to do with the dealer',
+						id: 'login-select',
+						multiselect: {
+							options: [
+								{ label: 'post purchase order' },
+								{ label: 'get list of stores' },
+								{ label: 'get stock inventory' }
+							]
+						}
+					}
+				] %}
+					{{mixins.group(item)}}
+				{% endfor %}
+				<div class="form__footer">
+					<button class="btn btn_wide" data-animation="ripple">Send request</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+{% endblock %}

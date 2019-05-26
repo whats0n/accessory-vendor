@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Index page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <div class="container">
+        <div class="inner">
+          <form action="/" class="form form_sm form_box">
+            <div class="form-group ">
+              <label for="login-name" class="form-group__label">Enter name</label>
+              <div class="form-group__field">
+                <input type="text" class="input form-group__input " id="login-name">
+              </div>
+            </div>
+            <div class="form-group ">
+              <label for="login-email" class="form-group__label">Enter email</label>
+              <div class="form-group__field">
+                <input type="text" class="input form-group__input " id="login-email">
+              </div>
+            </div>
+            <div class="form-group ">
+              <label for="login-password" class="form-group__label">Enter password</label>
+              <div class="form-group__field">
+                <input type="password" class="input form-group__input " id="login-password">
+              </div>
+            </div>
+            <div class="form-group ">
+              <label for="login-confirm" class="form-group__label">Confirm password</label>
+              <div class="form-group__field">
+                <input type="password" class="input form-group__input " id="login-confirm">
+              </div>
+            </div>
+            <div class="form-group ">
+              <label for="login-select" class="form-group__label">Select actions that you plan to do with the dealer</label>
+              <div class="form-group__field">
+                <div class="select " data-select>
+                  <div class="select__header">
+                    <svg class="icon icon-angle-down select__arrow">
+                      <use xlink:href="img/sprite.svg#icon-angle-down"></use>
+                    </svg>
+                    <div class="select__value" data-select-value>Choose...</div>
+                  </div>
+                  <div class="select__body" data-select-dropdown>
+                    <ul class="select__list">
+                      <li class="select__option">
+                        <label class="checkbox  ">
+                          <input type="checkbox" class="checkbox__input">
+                          <span class="checkbox__icon">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/sprite.svg#icon-check"></use>
+                            </svg>
+                          </span>
+                          <span class="checkbox__label">post purchase order</span>
+                        </label>
+                      </li>
+                      <li class="select__option">
+                        <label class="checkbox  ">
+                          <input type="checkbox" class="checkbox__input">
+                          <span class="checkbox__icon">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/sprite.svg#icon-check"></use>
+                            </svg>
+                          </span>
+                          <span class="checkbox__label">get list of stores</span>
+                        </label>
+                      </li>
+                      <li class="select__option">
+                        <label class="checkbox  ">
+                          <input type="checkbox" class="checkbox__input">
+                          <span class="checkbox__icon">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/sprite.svg#icon-check"></use>
+                            </svg>
+                          </span>
+                          <span class="checkbox__label">get stock inventory</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__footer">
+              <button class="btn btn_wide" data-animation="ripple">Send request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

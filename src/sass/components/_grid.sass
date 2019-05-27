@@ -1,0 +1,42 @@
+.grid
+	&__header,
+	&__row
+		display: flex
+	&__header
+		font-size: 18px
+		font-weight: 700
+		+sm 
+			display: none
+	&__row
+		border-top: 1px solid rgba($darkGray, 0.1)
+		font-size: 16px
+		+sm
+			display: block
+			padding: 12px 0
+	&__col
+		display: flex
+		align-items: center
+		padding: 12px 20px
+		width: 33%
+		&_md 
+			width: 50%
+		&_sm
+			width: 25%
+		+sm
+			align-items: flex-start
+			padding: 4px 20px
+			width: 100%
+		+xs
+			display: block
+		&:before
+			content: attr(data-title)
+			display: inline-block
+			vertical-align: top
+			flex: 0 0 auto
+			width: 50%
+			color: lighten($darkGray, 40%)
+			+xs
+				display: block
+				width: auto
+	&__align-center
+		justify-content: center

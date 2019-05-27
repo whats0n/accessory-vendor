@@ -1,0 +1,86 @@
+---
+title: 'Main Screen'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="container">
+		<div class="inner">
+			<div class="form form_sm">
+				{{mixins.group({
+					id: 'access-code',
+					label: 'Please provide the Access Code for the Dealer you wish to connect with.',
+					input: {
+						attrs: 'placeholder="Enter access code"'
+					}
+				})}}
+				{{mixins.group({
+					label: 'Select actions that you plan to do with the dealer',
+					id: 'select',
+					multiselect: {
+						options: [
+							{ label: 'post purchase order' },
+							{ label: 'get list of stores' },
+							{ label: 'get stock inventory' }
+						]
+					}
+				})}}
+				<div class="form__footer">
+					<button class="btn btn_wide" data-animation="ripple">Send request</button>
+				</div>
+			</div>
+			<div class="grid-box">
+				<form class="grid-box__search">
+					<div class="search grid-box__search-field">
+						<button type="submit" class="search__btn">
+							{{mixins.icon('search', 'search__icon')}}
+						</button>
+						<input type="text" class="input search__input" placeholder="Search by Dealer title, Dealer Code or Request Status">
+					</div>
+					<div class="grid-box__search-checkbox">
+						{{mixins.checkbox({
+							label: 'Only approved'
+						})}}
+					</div>
+				</form>
+				<div class="grid">
+					<div class="grid__header">
+						<div class="grid__col grid__col_md">Dealer</div>
+						<div class="grid__col grid__col_sm">Access Code</div>
+						<div class="grid__col grid__col_sm">Request Status</div>
+					</div>
+					<div class="grid__body">
+						{% for item in [
+							{
+								dealer: 'Name Last name',
+								code: '100000474',
+								status: 'Approved',
+								statusColor: 'color-green'
+							},
+							{
+								dealer: 'Name Last name',
+								code: '423',
+								status: 'Declined',
+								statusColor: 'color-red'
+							},
+							{
+								dealer: 'Name Last name',
+								code: '423',
+								status: 'Waiting for approval',
+								statusColor: 'color-primary'
+							}
+						] %}
+					    <div class="grid__row">
+					    	<div class="grid__col grid__col_md" data-title="Dealer">{{item.dealer}}</div>
+					    	<div class="grid__col grid__col_sm" data-title="Access Code">{{item.code}}</div>
+					    	<div class="grid__col grid__col_sm {{item.statusColor}}" data-title="Request Status">{{item.status}}</div>
+					    </div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

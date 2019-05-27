@@ -4,3 +4,4 @@ PageList:
 - file: login.html
 - file: registration.html
 - file: change-password.html
+- file: main.html

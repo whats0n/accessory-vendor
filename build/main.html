@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Registration</title>
+    <title>Main Screen</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
@@ -15,39 +15,21 @@
       <!-- begin header -->
       <header class="header ">
         <div class="header__inner">
-          <div class="header__title">Registration</div>
+          <div class="header__title">Main Screen</div>
         </div>
       </header>
       <!-- end header -->
       <div class="container">
         <div class="inner">
-          <form action="/" class="form form_sm form_box">
+          <div class="form form_sm">
             <div class="form-group ">
-              <label for="login-name" class="form-group__label">Enter name</label>
+              <label for="access-code" class="form-group__label">Please provide the Access Code for the Dealer you wish to connect with.</label>
               <div class="form-group__field">
-                <input type="text" class="input form-group__input " id="login-name">
+                <input type="text" class="input form-group__input " id="access-code" placeholder="Enter access code">
               </div>
             </div>
             <div class="form-group ">
-              <label for="login-email" class="form-group__label">Enter email</label>
-              <div class="form-group__field">
-                <input type="text" class="input form-group__input " id="login-email">
-              </div>
-            </div>
-            <div class="form-group ">
-              <label for="login-password" class="form-group__label">Enter password</label>
-              <div class="form-group__field">
-                <input type="password" class="input form-group__input " id="login-password">
-              </div>
-            </div>
-            <div class="form-group ">
-              <label for="login-confirm" class="form-group__label">Confirm password</label>
-              <div class="form-group__field">
-                <input type="password" class="input form-group__input " id="login-confirm">
-              </div>
-            </div>
-            <div class="form-group ">
-              <label for="login-select" class="form-group__label">Select actions that you plan to do with the dealer</label>
+              <label for="select" class="form-group__label">Select actions that you plan to do with the dealer</label>
               <div class="form-group__field">
                 <div class="select " data-select>
                   <div class="select__header">
@@ -99,7 +81,54 @@
             <div class="form__footer">
               <button class="btn btn_wide" data-animation="ripple">Send request</button>
             </div>
-          </form>
+          </div>
+          <div class="grid-box">
+            <form class="grid-box__search">
+              <div class="search grid-box__search-field">
+                <button type="submit" class="search__btn">
+                  <svg class="icon icon-search search__icon">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+                <input type="text" class="input search__input" placeholder="Search by Dealer title, Dealer Code or Request Status">
+              </div>
+              <div class="grid-box__search-checkbox">
+                <label class="checkbox  ">
+                  <input type="checkbox" class="checkbox__input">
+                  <span class="checkbox__icon">
+                    <svg class="icon icon-check ">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="checkbox__label">Only approved</span>
+                </label>
+              </div>
+            </form>
+            <div class="grid">
+              <div class="grid__header">
+                <div class="grid__col grid__col_md">Dealer</div>
+                <div class="grid__col grid__col_sm">Access Code</div>
+                <div class="grid__col grid__col_sm">Request Status</div>
+              </div>
+              <div class="grid__body">
+                <div class="grid__row">
+                  <div class="grid__col grid__col_md" data-title="Dealer">Name Last name</div>
+                  <div class="grid__col grid__col_sm" data-title="Access Code">100000474</div>
+                  <div class="grid__col grid__col_sm color-green" data-title="Request Status">Approved</div>
+                </div>
+                <div class="grid__row">
+                  <div class="grid__col grid__col_md" data-title="Dealer">Name Last name</div>
+                  <div class="grid__col grid__col_sm" data-title="Access Code">423</div>
+                  <div class="grid__col grid__col_sm color-red" data-title="Request Status">Declined</div>
+                </div>
+                <div class="grid__row">
+                  <div class="grid__col grid__col_md" data-title="Dealer">Name Last name</div>
+                  <div class="grid__col grid__col_sm" data-title="Access Code">423</div>
+                  <div class="grid__col grid__col_sm color-primary" data-title="Request Status">Waiting for approval</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@
 	&__header
 		font-size: 18px
 		font-weight: 700
-		+sm 
+		+sm
 			display: none
 	&__row
 		border-top: 1px solid rgba($darkGray, 0.1)
@@ -18,7 +18,7 @@
 		align-items: center
 		padding: 12px 20px
 		width: 33%
-		&_md 
+		&_md
 			width: 50%
 		&_sm
 			width: 25%
@@ -30,11 +30,13 @@
 			display: block
 		&:before
 			content: attr(data-title)
-			display: inline-block
+			display: none
 			vertical-align: top
 			flex: 0 0 auto
 			width: 50%
 			color: lighten($darkGray, 40%)
+			+sm
+				display: inline-block
 			+xs
 				display: block
 				width: auto
